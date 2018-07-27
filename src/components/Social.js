@@ -5,12 +5,7 @@ export const Social = ({ social, fontClassLibraryIcons }) => (
     <h5>Social</h5>
     <div className="social">
       {social.map((el, id) => (
-        <div
-          key={id}
-          className={
-            el.label === "web" ? "social__first social__icon" : "social__icon"
-          }
-        >
+        <div key={id} className="social__icon">
           <a
             href={el.link}
             target="_blank"

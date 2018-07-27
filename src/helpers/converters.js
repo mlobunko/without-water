@@ -1,9 +1,5 @@
-export const errorToString = error => {
-  return (
-    error.charAt(0).toUpperCase() +
-    error
-      .replace(/_/g, " ")
-      .substr(1)
-      .toLowerCase()
-  );
+export const placeWebIconFirst = arr => {
+  return arr.sort(el => {
+    return el.label === "web" ? -1 : 1;
+  });
 };

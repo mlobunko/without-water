@@ -14,6 +14,7 @@ import {
 } from "../../../redux/actions/settingErrorActions";
 import { getProfile } from "../../../helpers/configFetch";
 import { errorLibrary } from "../../../helpers/errorLibrary";
+import { placeWebIconFirst } from "../../../helpers/converters";
 
 export function* fetchingProfile() {
   while (true) {
@@ -25,10 +26,10 @@ export function* fetchingProfile() {
       yield put(setFetchingOff());
       const data = yield call([response, response.json]);
       if (data.status === "ok") {
-        const { city, languages, social } = yield data.data;
+        let { city, languages, social } = yield data.data;
         yield put(setCity(city));
         yield put(setLanguages(languages));
-        yield put(setSocial(social));
+        yield put(setSocial(placeWebIconFirst(social)));
       } else {
         yield put(setErrorLogin(errorLibrary[data.message]));
       }
