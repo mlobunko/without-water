@@ -25,9 +25,10 @@ export function* fetchingProfile() {
       yield put(setFetchingOff());
       const data = yield call([response, response.json]);
       if (data.status === "ok") {
-        yield put(setCity(data.data.city));
-        yield put(setLanguages(data.data.languages));
-        yield put(setSocial(data.data.social));
+        const { city, languages, social } = yield data.data;
+        yield put(setCity(city));
+        yield put(setLanguages(languages));
+        yield put(setSocial(social));
       } else {
         yield put(setErrorLogin(errorLibrary[data.message]));
       }
