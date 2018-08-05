@@ -6,3 +6,8 @@ export const POST_REQUEST =
 export const ERROR_TRANSLATE = {
   wrong_email_or_password: 'Wrong email or password'
 };
+
+export const ERROR_FORM_LIB = {
+  email: 'Email is not correct',
+  password: 'Password is not correct or too short'
+};

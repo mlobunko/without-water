@@ -7,7 +7,15 @@ export const init = objBody => ({
   body: JSON.stringify(objBody)
 });
 
-export const validateEmail = email => {
-  const regularExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regularExp.test(email);
+export const validator = (email, password) => {
+  const emailExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailValidate = emailExp.test(email);
+
+  const passwordExp = /^\w{5,16}$/;
+  const passwordValidate = passwordExp.test(password);
+
+  return {
+    email: emailValidate,
+    password: passwordValidate
+  };
 };

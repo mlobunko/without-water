@@ -11,11 +11,12 @@ export const LogInComponent = ({
   isError,
   loginError,
   password,
+  passwordError,
   onKeyPress,
   serverError
 }) => (
   <React.Fragment>
-    <h1 className="login-h1">Sign In</h1>
+    <h1 className="login-h1">Log In</h1>
     <form
       onSubmit={handleSubmit}
       onKeyPress={fetching ? onKeyPress : undefined}
@@ -32,7 +33,6 @@ export const LogInComponent = ({
           autoComplete="on"
           onChange={handleInputsChange}
           invalid={!!loginError || !!emailError}
-          required
         />
         {emailError && <Alert color="danger"> {emailError} </Alert>}
       </FormGroup>
@@ -46,12 +46,15 @@ export const LogInComponent = ({
           value={password}
           autoComplete="on"
           onChange={handleInputsChange}
-          invalid={!!loginError}
-          required
+          invalid={!!loginError || !!passwordError}
         />
       </FormGroup>
       {fetching && <Loader className="loader-login" />}
-      {isError && <Alert color="danger">{loginError || serverError}</Alert>}
+      {isError || !!passwordError ? (
+        <Alert color="danger">
+          {loginError || serverError || passwordError}
+        </Alert>
+      ) : null}
       <div className="login-form__submit-div">
         <Button outline color="dark" type="submit" disabled={!!fetching}>
           Log in

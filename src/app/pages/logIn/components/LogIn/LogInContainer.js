@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect, withRouter } from 'react-router-dom';
 import * as model from '../../model';
 import * as actions from '../../actions';
+import * as constants from '../../constants';
 import error from 'shared/error';
 import { LogInComponent } from './LogInComponent';
 
@@ -10,7 +11,8 @@ export class LogInContainer extends React.Component {
   state = {
     email: '',
     password: '',
-    emailError: ''
+    emailError: '',
+    passwordError: ''
   };
 
   componentDidMount = () => {
@@ -27,18 +29,20 @@ export class LogInContainer extends React.Component {
 
   setStateErrosToNull = () => {
     this.setState({
-      emailError: ''
+      emailError: '',
+      passwordError: ''
     });
   };
 
   handleInputsChange = e => {
     if (
-      (this.props.isError && !!this.props.serverError) ||
+      this.props.isError &&
+      !!this.props.serverError &&
       !!this.props.loginError
     ) {
       this.props.errorActionsSetNull();
     }
-    if (!!this.state.emailError) {
+    if (!!this.state.emailError || !!this.state.passwordError) {
       this.setStateErrosToNull();
     }
     const value = e.currentTarget.value;
@@ -49,17 +53,23 @@ export class LogInContainer extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    this.props.errorActionsSetNull();
-    this.setStateErrosToNull();
-    if (model.validateEmail(this.state.email)) {
+    const validator = model.validator(this.state.email, this.state.password);
+    if (validator.email && validator.password) {
       this.props.actionsSubmit({
         email: '' + this.state.email,
         password: '' + this.state.password
       });
     } else {
-      this.setState({
-        emailError: 'Email is not valid'
-      });
+      if (!validator.email) {
+        this.setState({
+          emailError: constants.ERROR_FORM_LIB.email
+        });
+      }
+      if (!validator.password) {
+        this.setState({
+          passwordError: constants.ERROR_FORM_LIB.password
+        });
+      }
     }
   };
   onKeyPress(event) {
@@ -84,6 +94,7 @@ export class LogInContainer extends React.Component {
         isError={this.props.isError}
         loginError={this.props.loginError}
         password={this.state.password}
+        passwordError={this.state.passwordError}
         onKeyPress={this.onKeyPress}
         serverError={this.props.serverError}
       />
