@@ -1,11 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+
 import { MainComponent } from './MainComponent';
+import ErrorBoundary from '../ErrorBoundary';
 
 export class MainContainer extends React.Component {
   render() {
-    return <MainComponent authorized={this.props.authorized} />;
+    return (
+      <ErrorBoundary>
+        <MainComponent authorized={this.props.authorized} />
+      </ErrorBoundary>
+    );
   }
 }
 
