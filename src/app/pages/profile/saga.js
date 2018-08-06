@@ -22,7 +22,7 @@ export const fetchProfile = function*() {
         let { city, languages, social } = yield data.data;
         yield put(actions.addCity(city));
         yield put(actions.addLanguages(languages));
-        yield put(actions.addSocial(model.placeWebIconFirst(social)));
+        yield put(actions.addSocial(social));
       } else {
         yield error.saga.errorHandler({
           login: true,
