@@ -1,3 +1,3 @@
-import RouteWithSubRoutes from './RouteWithSubRoutesComponent';
+import RouteWithSubRoutes from './RouteWithSubRoutes';
 
 export default RouteWithSubRoutes;

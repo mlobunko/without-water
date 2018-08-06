@@ -1,8 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import * as actions from '../../actions';
-import error from 'shared/error';
+import { getCity } from '../../selectors';
 import { ProfileComponent } from './ProfileComponent';
+
+import error from 'shared/error';
+import fetching from 'shared/fetching';
 
 export class ProfileContainer extends React.Component {
   componentDidMount = () => {
@@ -15,22 +19,19 @@ export class ProfileContainer extends React.Component {
     return (
       <ProfileComponent
         fetching={this.props.fetching}
-        isError={this.props.isError}
+        isError={this.props.errorState.isError}
         languages={this.props.languages}
-        serverError={this.props.serverError}
-        loginError={this.props.loginError}
+        serverError={this.props.errorState.serverError}
+        loginError={this.props.errorState.loginError}
       />
     );
   }
 }
 
 const mapStateToProps = state => ({
-  city: state.profile.city,
-  fetching: state.fetching,
-  isError: state.error.isError,
-  languages: state.profile.languages,
-  serverError: state.error.serverError,
-  loginError: state.error.loginError
+  city: getCity(state),
+  fetching: fetching.selectors.getAll(state),
+  errorState: error.selectors.getAll(state)
 });
 
 const madDispatchToProps = {

@@ -1,3 +1,3 @@
-import { UserImageComponent as UserImage } from './UserImageComponent';
+import UserImage from './UserImage';
 
 export default UserImage;

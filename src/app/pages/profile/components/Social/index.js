@@ -1,3 +1,4 @@
-import Social from './SocialContainer';
+import * as components from './components';
+import * as constants from './constants';
 
-export default Social;
+export default { components, constants };

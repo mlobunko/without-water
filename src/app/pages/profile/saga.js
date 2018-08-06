@@ -1,18 +1,21 @@
 import { take, call, put, select } from 'redux-saga/effects';
+
 import * as actions from './actions';
 import * as constants from './constants';
-import error from 'shared/error';
 import * as model from './model';
 import * as t from './actionTypes';
+
+import error from 'shared/error';
 import fetching from 'shared/fetching';
+import logIn from 'app/pages/logIn';
 
 export const fetchProfile = function*() {
   while (true) {
     yield take(t.FETCH);
     try {
       yield put(fetching.actions.on());
-      const state = yield select();
-      const response = yield call(fetch, model.getProfile(state.logIn));
+      const logInState = yield select(logIn.selectors.getAll);
+      const response = yield call(fetch, model.getProfile(logInState));
       yield put(fetching.actions.off());
       const data = yield call([response, response.json]);
       if (data.status === 'ok') {

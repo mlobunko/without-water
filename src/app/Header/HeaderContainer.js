@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import authorized from 'shared/authorized';
+
 import { HeaderComponent } from './HeaderComponent';
+
+import authorized from 'shared/authorized';
 
 export class HeaderContainer extends React.Component {
   state = {
@@ -53,7 +55,7 @@ export class HeaderContainer extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  authorized: state.authorized
+  authorized: authorized.selectors.getAll(state)
 });
 
 const mapDispatchToProps = {

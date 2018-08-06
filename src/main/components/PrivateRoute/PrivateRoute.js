@@ -1,11 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-export const PrivateRouteComponent = ({
-  component: Component,
-  authorized,
-  ...rest
-}) => (
+export const PrivateRoute = ({ component: Component, authorized, ...rest }) => (
   <Route
     {...rest}
     render={props =>
@@ -20,4 +16,4 @@ export const PrivateRouteComponent = ({
   />
 );
 
-export default PrivateRouteComponent;
+export default PrivateRoute;

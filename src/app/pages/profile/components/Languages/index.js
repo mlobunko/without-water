@@ -1,3 +1,4 @@
-import Languages from './LangaugesContainer';
+import * as components from './components';
+import * as constants from './constants';
 
-export default Languages;
+export default { components, constants };

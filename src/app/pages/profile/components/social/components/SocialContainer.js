@@ -1,9 +1,11 @@
 import { connect } from 'react-redux';
+
+import * as constants from '../../../constants';
+import { getSocial } from '../../../selectors';
 import { SocialComponent } from './SocialComponent';
-import * as constants from '../../constants';
 
 const mapStateToProps = state => ({
-  social: state.profile.social,
+  social: getSocial(state),
   fontClassLibraryIcons: constants.FONT_CLASS_LIBRARY_ICONS
 });
 

@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import { MainComponent } from './MainComponent';
 import ErrorBoundary from '../ErrorBoundary';
 
+import authorized from 'shared/authorized';
+
 export class MainContainer extends React.Component {
   render() {
     return (
@@ -16,7 +18,7 @@ export class MainContainer extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  authorized: state.authorized
+  authorized: authorized.selectors.getAll(state)
 });
 
 export default withRouter(connect(mapStateToProps)(MainContainer));

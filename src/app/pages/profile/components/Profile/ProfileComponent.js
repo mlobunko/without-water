@@ -2,9 +2,9 @@ import React from 'react';
 import { Alert } from 'reactstrap';
 import Loader from 'shared/fetching/components/Loader';
 import UserImage from '../UserImage';
-import Social from '../Social';
-import City from '../City';
-import Languages from '../Languages';
+import Social from '../social/components';
+import City from '../city/components';
+import Languages from '../languages/components';
 
 export const ProfileComponent = ({
   fetching,

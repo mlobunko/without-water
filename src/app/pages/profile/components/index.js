@@ -1,7 +1,7 @@
-import City from './City';
-import Languages from './Languages';
+import city from './city';
+import languages from './languages';
 import Profile from './Profile';
-import Social from './Social';
+import social from './social';
 import UserImage from './UserImage';
 
-export default { City, Languages, Profile, Social, UserImage };
+export default { city, languages, Profile, social, UserImage };

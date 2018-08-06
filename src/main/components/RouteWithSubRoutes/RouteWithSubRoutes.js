@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 import PrivateRoute from '../PrivateRoute';
 
-export const RouteWithSubRoutesComponent = route => (
+export const RouteWithSubRoutes = route => (
   <Route
     path={route.path}
     render={props =>
@@ -23,4 +23,4 @@ export const RouteWithSubRoutesComponent = route => (
   />
 );
 
-export default RouteWithSubRoutesComponent;
+export default RouteWithSubRoutes;

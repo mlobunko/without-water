@@ -1,11 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, withRouter } from 'react-router-dom';
+
 import * as model from '../../model';
 import * as actions from '../../actions';
 import * as constants from '../../constants';
-import error from 'shared/error';
 import { LogInComponent } from './LogInComponent';
+
+import authorized from 'shared/authorized';
+import error from 'shared/error';
 
 export class LogInContainer extends React.Component {
   state = {
@@ -91,23 +94,21 @@ export class LogInContainer extends React.Component {
         fetching={this.props.fetching}
         handleInputsChange={this.handleInputsChange}
         handleSubmit={this.handleSubmit}
-        isError={this.props.isError}
-        loginError={this.props.loginError}
+        isError={this.props.errorState.isError}
+        loginError={this.props.errorState.loginError}
         password={this.state.password}
         passwordError={this.state.passwordError}
         onKeyPress={this.onKeyPress}
-        serverError={this.props.serverError}
+        serverError={this.props.errorState.serverError}
       />
     );
   }
 }
 
 const mapStateToProps = state => ({
-  authorized: state.authorized,
-  fetching: state.fetching,
-  isError: state.error.isError,
-  loginError: state.error.loginError,
-  serverError: state.error.serverError
+  authorized: authorized.selectors.getAll(state),
+  fetching: authorized.selectors.getAll(state),
+  errorState: error.selectors.getAll(state)
 });
 
 const mapDispatchToProps = {

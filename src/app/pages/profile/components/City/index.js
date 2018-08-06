@@ -1,3 +1,4 @@
-import City from './CityContainer';
+import * as components from './components';
+import * as constants from './constants';
 
-export default City;
+export default { components, constants };
