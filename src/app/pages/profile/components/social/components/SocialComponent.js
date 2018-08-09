@@ -1,21 +1,24 @@
 import React from 'react';
 
-export const SocialComponent = ({ social, fontClassLibraryIcons }) => (
+import { StyledSocialComponent } from './styles';
+import Header from './Header';
+
+export const SocialComponent = ({ social, getIconByName }) => (
   <React.Fragment>
-    <h5>Social</h5>
-    <div className="social">
+    <Header text={'Social'} />
+    <StyledSocialComponent>
       {social.map((el, id) => (
-        <div key={id} className="social__icon">
+        <div key={id}>
           <a
             href={el.link}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={el.label}
           >
-            <i className={fontClassLibraryIcons[el.label]} />
+            {getIconByName(el.label)}
           </a>
         </div>
       ))}
-    </div>
+    </StyledSocialComponent>
   </React.Fragment>
 );

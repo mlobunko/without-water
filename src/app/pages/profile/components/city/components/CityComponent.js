@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { IconMapMarketAlt } from '../../../icons';
+
 export const CityComponent = ({ city }) => (
   <div>
     <span>
-      <i className="fas fa-map-marker-alt" />
+      {IconMapMarketAlt}
       {` ${city}`}
     </span>
   </div>

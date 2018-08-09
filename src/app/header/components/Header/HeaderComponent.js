@@ -1,14 +1,8 @@
 import React from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+
+import { StyledNavbarBrand, StyledNavLink } from '../../styles';
 
 export const HeaderComponent = ({
   authorized,
@@ -18,33 +12,31 @@ export const HeaderComponent = ({
 }) => (
   <Navbar color="dark" dark expand="md">
     <LinkContainer to="/">
-      <NavbarBrand className="mr-auto">
-        <div className="nav-bar__logo" />
-      </NavbarBrand>
+      <StyledNavbarBrand />
     </LinkContainer>
     <NavbarToggler onClick={toggle} className="mr-2" />
     <Collapse isOpen={isOpen} navbar>
       <Nav className="ml-auto" navbar>
         <LinkContainer to="/news" activeClassName="active">
           <NavItem>
-            <NavLink className="nav-bar__link">News</NavLink>
+            <StyledNavLink>News</StyledNavLink>
           </NavItem>
         </LinkContainer>
         <LinkContainer to="/profile" activeClassName="active">
           <NavItem>
-            <NavLink className="nav-bar__link">Profile</NavLink>
+            <StyledNavLink>Profile</StyledNavLink>
           </NavItem>
         </LinkContainer>
         {authorized ? (
           <LinkContainer exact to="/">
             <NavItem onClick={authorizedActionsLogOut}>
-              <NavLink className="nav-bar__link">Log out</NavLink>
+              <StyledNavLink>Log out</StyledNavLink>
             </NavItem>
           </LinkContainer>
         ) : (
           <LinkContainer to="/login" activeClassName="active">
             <NavItem>
-              <NavLink className="nav-bar__link">Log in</NavLink>
+              <StyledNavLink>Log in</StyledNavLink>
             </NavItem>
           </LinkContainer>
         )}

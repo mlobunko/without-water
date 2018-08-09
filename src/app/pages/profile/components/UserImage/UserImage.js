@@ -1,5 +1,7 @@
 import React from 'react';
 
-export const UserImage = () => <div className="image-user" />;
+import { StyledUserImage } from '../../styles';
+
+export const UserImage = () => <StyledUserImage />;
 
 export default UserImage;

@@ -8,7 +8,6 @@ import configureStore, { preloadedState } from './configureStore';
 import Main from 'main/components/Main';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/styles.css';
 
 const store = configureStore(preloadedState);
 

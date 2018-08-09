@@ -1,11 +1,9 @@
 import React from 'react';
-import { Alert } from 'reactstrap';
+import Alert from 'shared/error/components/Alert';
 import { errorMessage } from '../constants';
 
 export const NotFound = () => (
-  <div className="container-vertical-60vh">
-    <Alert color="danger">{errorMessage}</Alert>
-  </div>
+  <Alert color="danger" textError={errorMessage} centerPage />
 );
 
 export default NotFound;

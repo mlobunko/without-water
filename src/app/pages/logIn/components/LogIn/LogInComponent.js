@@ -1,5 +1,11 @@
 import React from 'react';
-import { Alert, Button, FormGroup, Input, Label } from 'reactstrap';
+import Alert from 'shared/error/components/Alert';
+import { FormGroup, Input, Label } from 'reactstrap';
+
+import { StyledForm } from './styles';
+
+import Button from './Button';
+import HeaderH1 from 'app/header/components/HeaderH1';
 import Loader from 'shared/fetching/components/Loader';
 
 export const LogInComponent = ({
@@ -16,8 +22,8 @@ export const LogInComponent = ({
   serverError
 }) => (
   <React.Fragment>
-    <h1 className="login-h1">Log In</h1>
-    <form
+    <HeaderH1 text={'Log In'} />
+    <StyledForm
       onSubmit={handleSubmit}
       onKeyPress={fetching ? onKeyPress : undefined}
       className="login-form"
@@ -28,20 +34,18 @@ export const LogInComponent = ({
           id="email"
           placeholder="Enter email"
           type="text"
-          className="login-form__input"
           value={email}
           autoComplete="on"
           onChange={handleInputsChange}
           invalid={!!loginError || !!emailError}
         />
-        {emailError && <Alert color="danger"> {emailError} </Alert>}
+        {emailError && <Alert color="danger" textError={emailError} />}
       </FormGroup>
       <FormGroup>
         <Label htmlFor="password">Password</Label>
         <Input
           id="password"
           placeholder="Enter password"
-          className="login-form__input"
           type="password"
           value={password}
           autoComplete="on"
@@ -49,17 +53,20 @@ export const LogInComponent = ({
           invalid={!!loginError || !!passwordError}
         />
       </FormGroup>
-      {fetching && <Loader className="loader-login" />}
+      {fetching && <Loader login />}
       {isError || !!passwordError ? (
-        <Alert color="danger">
-          {loginError || serverError || passwordError}
-        </Alert>
+        <Alert
+          color="danger"
+          textError={loginError || serverError || passwordError}
+        />
       ) : null}
-      <div className="login-form__submit-div">
-        <Button outline color="dark" type="submit" disabled={!!fetching}>
-          Log in
-        </Button>
-      </div>
-    </form>
+      <Button
+        text={'Log In'}
+        outline
+        color="dark"
+        type="submit"
+        disabled={!!fetching}
+      />
+    </StyledForm>
   </React.Fragment>
 );

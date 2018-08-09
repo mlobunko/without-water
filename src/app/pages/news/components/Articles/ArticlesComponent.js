@@ -1,20 +1,18 @@
 import React from 'react';
-import { Jumbotron } from 'reactstrap';
-import CounterNews from './CounterNewsComponent';
+import CounterNews from './CounterNews';
+import { StyledJumbotron } from './styles';
+import { StyledArticlesSection, StyledHeader } from './styles';
 
 export const ArticlesComponent = ({ news }) => (
   <React.Fragment>
-    <div className="container-max-width container-articles">
+    <StyledArticlesSection>
       {news.map(({ title, text }) => (
-        <Jumbotron
-          className="container-max-width__article news-jambotron"
-          key={title}
-        >
-          <h3>{title}</h3>
+        <StyledJumbotron key={title}>
+          <StyledHeader>{title}</StyledHeader>
           <p>{text}</p>
-        </Jumbotron>
+        </StyledJumbotron>
       ))}
-    </div>
+    </StyledArticlesSection>
     <CounterNews total={news.length} />
   </React.Fragment>
 );

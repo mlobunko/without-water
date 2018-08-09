@@ -8,6 +8,7 @@ import * as constants from '../../constants';
 import { LogInComponent } from './LogInComponent';
 
 import authorized from 'shared/authorized';
+import fetching from 'shared/fetching';
 import error from 'shared/error';
 
 export class LogInContainer extends React.Component {
@@ -23,7 +24,7 @@ export class LogInContainer extends React.Component {
   };
 
   static getDerivedStateFromProps(props) {
-    if (!!props.loginError) {
+    if (!!props.errorState.loginError) {
       return {
         password: ''
       };
@@ -38,11 +39,7 @@ export class LogInContainer extends React.Component {
   };
 
   handleInputsChange = e => {
-    if (
-      this.props.isError &&
-      !!this.props.serverError &&
-      !!this.props.loginError
-    ) {
+    if (this.props.errorState.isError) {
       this.props.errorActionsSetNull();
     }
     if (!!this.state.emailError || !!this.state.passwordError) {
@@ -107,7 +104,7 @@ export class LogInContainer extends React.Component {
 
 const mapStateToProps = state => ({
   authorized: authorized.selectors.getAll(state),
-  fetching: authorized.selectors.getAll(state),
+  fetching: fetching.selectors.getAll(state),
   errorState: error.selectors.getAll(state)
 });
 
