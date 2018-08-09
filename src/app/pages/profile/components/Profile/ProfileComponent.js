@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Alert from 'shared/error/components/Alert';
 import Loader from 'shared/fetching/components/Loader';
@@ -11,8 +12,8 @@ import { StyledProfileComponent } from '../../styles';
 export const ProfileComponent = ({
   fetching,
   isError,
-  serverError,
-  loginError
+  loginError,
+  serverError
 }) => (
   <React.Fragment>
     {fetching ? (
@@ -29,3 +30,12 @@ export const ProfileComponent = ({
     )}
   </React.Fragment>
 );
+
+export default ProfileComponent;
+
+ProfileComponent.propTypes = {
+  fetching: PropTypes.bool,
+  isError: PropTypes.bool,
+  loginError: PropTypes.string,
+  serverError: PropTypes.string
+};

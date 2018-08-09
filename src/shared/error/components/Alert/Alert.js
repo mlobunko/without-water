@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Alert as AlertStrap } from 'reactstrap';
 import { AlertStyled } from './styles';
 
@@ -9,3 +11,9 @@ export const Alert = ({ color, textError, centerPage }) => (
 );
 
 export default Alert;
+
+Alert.propTypes = {
+  color: PropTypes.string,
+  textError: PropTypes.string,
+  centerPage: PropTypes.bool
+};

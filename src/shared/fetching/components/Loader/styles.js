@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 import imageLoader from '../../images/loader.svg';
 
 export const StyledLoader = styled.div`
@@ -20,3 +21,7 @@ export const StyledImage = styled.div`
   width: 100%;
   margin-bottom: ${props => props.login && '1rem'};
 `;
+
+StyledLoader.propTypes = {
+  centerPage: PropTypes.bool
+};

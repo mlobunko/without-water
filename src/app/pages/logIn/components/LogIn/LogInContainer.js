@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import * as model from '../../model';
 import * as actions from '../../actions';
 import * as constants from '../../constants';
-import { LogInComponent } from './LogInComponent';
+import LogInComponent from './LogInComponent';
 
 import authorized from 'shared/authorized';
 import fetching from 'shared/fetching';
@@ -119,3 +120,9 @@ export default withRouter(
     mapDispatchToProps
   )(LogInContainer)
 );
+
+LogInContainer.propTypes = {
+  authorized: PropTypes.bool,
+  fetching: PropTypes.bool,
+  errorState: PropTypes.object
+};

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { StyledCounterNews } from './styles';
 
 export const CounterNews = ({ total }) => (
@@ -8,3 +10,7 @@ export const CounterNews = ({ total }) => (
 );
 
 export default CounterNews;
+
+CounterNews.propTypes = {
+  total: PropTypes.number
+};

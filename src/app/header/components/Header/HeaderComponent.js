@@ -1,6 +1,7 @@
 import React from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 import { StyledNavbarBrand, StyledNavLink } from '../../styles';
 
@@ -44,3 +45,12 @@ export const HeaderComponent = ({
     </Collapse>
   </Navbar>
 );
+
+export default HeaderComponent;
+
+HeaderComponent.propTypes = {
+  authorized: PropTypes.bool,
+  authorizedActionsLogOut: PropTypes.func,
+  isOpen: PropTypes.bool,
+  toggle: PropTypes.func
+};

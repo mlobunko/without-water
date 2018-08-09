@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import { HeaderComponent } from './HeaderComponent';
+import HeaderComponent from './HeaderComponent';
 
 import authorized from 'shared/authorized';
 
@@ -68,3 +69,7 @@ export default withRouter(
     mapDispatchToProps
   )(HeaderContainer)
 );
+
+HeaderContainer.propTypes = {
+  authorized: PropTypes.bool
+};

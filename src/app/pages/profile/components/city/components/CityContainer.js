@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { getCity } from '../../../selectors';
-import { CityComponent } from './CityComponent';
+import CityComponent from './CityComponent';
 
 const mapStateToProps = state => ({
   city: getCity(state)

@@ -1,6 +1,7 @@
 import React from 'react';
 import Alert from 'shared/error/components/Alert';
 import { FormGroup, Input, Label } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 import { StyledForm } from './styles';
 
@@ -70,3 +71,19 @@ export const LogInComponent = ({
     </StyledForm>
   </React.Fragment>
 );
+
+export default LogInComponent;
+
+LogInComponent.propTypes = {
+  email: PropTypes.string,
+  emailError: PropTypes.string,
+  fetching: PropTypes.bool,
+  handleInputsChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  isError: PropTypes.bool,
+  loginError: PropTypes.string,
+  password: PropTypes.string,
+  passwordError: PropTypes.string,
+  onKeyPress: PropTypes.func,
+  serverError: PropTypes.string
+};

@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import * as actions from '../../actions';
 import { getAll } from '../../selectors';
-import { NewsComponent } from './NewsComponent';
+import NewsComponent from './NewsComponent';
 
 import error from 'shared/error';
 import fetching from 'shared/fetching';
@@ -41,3 +42,9 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(NewsContainer);
+
+NewsContainer.propTypes = {
+  fetching: PropTypes.bool,
+  errorState: PropTypes.object,
+  news: PropTypes.array
+};

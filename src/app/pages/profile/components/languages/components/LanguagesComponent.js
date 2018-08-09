@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { IconLanguage } from '../../../icons';
 
 export const LanguagesComponent = ({ languages }) => (
@@ -11,3 +13,9 @@ export const LanguagesComponent = ({ languages }) => (
     </span>
   </div>
 );
+
+export default LanguagesComponent;
+
+LanguagesComponent.propTypes = {
+  languages: PropTypes.array
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { StyledSocialComponent } from './styles';
 import Header from './Header';
@@ -22,3 +23,10 @@ export const SocialComponent = ({ social, getIconByName }) => (
     </StyledSocialComponent>
   </React.Fragment>
 );
+
+export default SocialComponent;
+
+SocialComponent.propTypes = {
+  social: PropTypes.array,
+  getIconByName: PropTypes.func
+};

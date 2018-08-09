@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import Header from 'app/header/components/Header';
 
@@ -17,3 +18,9 @@ export const MainComponent = ({ authorized }) => (
     </Switch>
   </StyledMainComponent>
 );
+
+export default MainComponent;
+
+MainComponent.propTypes = {
+  authorized: PropTypes.bool
+};

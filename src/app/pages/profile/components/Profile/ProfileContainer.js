@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import * as actions from '../../actions';
 import { getCity } from '../../selectors';
-import { ProfileComponent } from './ProfileComponent';
+import ProfileComponent from './ProfileComponent';
 
 import error from 'shared/error';
 import fetching from 'shared/fetching';
@@ -43,3 +44,9 @@ export default connect(
   mapStateToProps,
   madDispatchToProps
 )(ProfileContainer);
+
+ProfileContainer.propTypes = {
+  city: PropTypes.string,
+  fetching: PropTypes.bool,
+  errorState: PropTypes.object
+};

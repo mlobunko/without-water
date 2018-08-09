@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import { MainComponent } from './MainComponent';
+import MainComponent from './MainComponent';
 import ErrorBoundary from '../ErrorBoundary';
 
 import authorized from 'shared/authorized';
@@ -22,3 +23,7 @@ const mapStateToProps = state => ({
 });
 
 export default withRouter(connect(mapStateToProps)(MainContainer));
+
+MainContainer.propTypes = {
+  authorized: PropTypes.bool
+};

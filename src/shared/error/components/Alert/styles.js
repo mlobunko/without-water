@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const AlertStyled = styled.div`
   ${props =>
@@ -11,3 +12,7 @@ export const AlertStyled = styled.div`
       height: 60vh;
     `};
 `;
+
+AlertStyled.propTypes = {
+  centerPage: PropTypes.bool
+};

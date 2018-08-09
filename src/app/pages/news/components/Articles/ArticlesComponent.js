@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import CounterNews from './CounterNews';
 import { StyledJumbotron } from './styles';
 import { StyledArticlesSection, StyledHeader } from './styles';
@@ -16,3 +18,9 @@ export const ArticlesComponent = ({ news }) => (
     <CounterNews total={news.length} />
   </React.Fragment>
 );
+
+export default ArticlesComponent;
+
+ArticlesComponent.propTypes = {
+  news: PropTypes.array
+};
