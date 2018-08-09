@@ -13,7 +13,7 @@ export const Alert = ({ color, textError, centerPage }) => (
 export default Alert;
 
 Alert.propTypes = {
-  color: PropTypes.string,
-  textError: PropTypes.string,
+  color: PropTypes.string.isRequired,
+  textError: PropTypes.string.isRequired,
   centerPage: PropTypes.bool
 };

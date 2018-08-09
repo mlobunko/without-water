@@ -34,8 +34,8 @@ export const ProfileComponent = ({
 export default ProfileComponent;
 
 ProfileComponent.propTypes = {
-  fetching: PropTypes.bool,
-  isError: PropTypes.bool,
+  fetching: PropTypes.bool.isRequired,
+  isError: PropTypes.bool.isRequired,
   loginError: PropTypes.string,
   serverError: PropTypes.string
 };

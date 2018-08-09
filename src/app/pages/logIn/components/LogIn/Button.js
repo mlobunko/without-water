@@ -20,9 +20,9 @@ export const Button = ({ color, disabled, outline, text, type }) => (
 export default Button;
 
 Button.propTypes = {
-  color: PropTypes.string,
-  disabled: PropTypes.bool,
+  color: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
   outline: PropTypes.bool,
-  text: PropTypes.string,
-  type: PropTypes.string
+  text: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired
 };

@@ -27,6 +27,6 @@ export const SocialComponent = ({ social, getIconByName }) => (
 export default SocialComponent;
 
 SocialComponent.propTypes = {
-  social: PropTypes.array,
-  getIconByName: PropTypes.func
+  social: PropTypes.array.isRequired,
+  getIconByName: PropTypes.func.isRequired
 };

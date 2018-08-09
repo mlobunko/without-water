@@ -8,5 +8,5 @@ export const Header = ({ text }) => <StyledHeader>{text}</StyledHeader>;
 export default Header;
 
 Header.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string.isRequired
 };

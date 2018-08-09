@@ -122,7 +122,7 @@ export default withRouter(
 );
 
 LogInContainer.propTypes = {
-  authorized: PropTypes.bool,
-  fetching: PropTypes.bool,
-  errorState: PropTypes.object
+  authorized: PropTypes.bool.isRequired,
+  fetching: PropTypes.bool.isRequired,
+  errorState: PropTypes.object.isRequired
 };

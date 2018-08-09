@@ -22,5 +22,5 @@ export const MainComponent = ({ authorized }) => (
 export default MainComponent;
 
 MainComponent.propTypes = {
-  authorized: PropTypes.bool
+  authorized: PropTypes.bool.isRequired
 };

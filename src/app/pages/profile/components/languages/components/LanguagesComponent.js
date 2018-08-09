@@ -17,5 +17,5 @@ export const LanguagesComponent = ({ languages }) => (
 export default LanguagesComponent;
 
 LanguagesComponent.propTypes = {
-  languages: PropTypes.array
+  languages: PropTypes.array.isRequired
 };

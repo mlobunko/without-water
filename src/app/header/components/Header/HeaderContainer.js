@@ -71,5 +71,5 @@ export default withRouter(
 );
 
 HeaderContainer.propTypes = {
-  authorized: PropTypes.bool
+  authorized: PropTypes.bool.isRequired
 };

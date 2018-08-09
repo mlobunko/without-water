@@ -49,8 +49,8 @@ export const HeaderComponent = ({
 export default HeaderComponent;
 
 HeaderComponent.propTypes = {
-  authorized: PropTypes.bool,
-  authorizedActionsLogOut: PropTypes.func,
-  isOpen: PropTypes.bool,
-  toggle: PropTypes.func
+  authorized: PropTypes.bool.isRequired,
+  authorizedActionsLogOut: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired
 };

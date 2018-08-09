@@ -25,5 +25,5 @@ const mapStateToProps = state => ({
 export default withRouter(connect(mapStateToProps)(MainContainer));
 
 MainContainer.propTypes = {
-  authorized: PropTypes.bool
+  authorized: PropTypes.bool.isRequired
 };

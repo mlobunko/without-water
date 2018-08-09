@@ -75,15 +75,15 @@ export const LogInComponent = ({
 export default LogInComponent;
 
 LogInComponent.propTypes = {
-  email: PropTypes.string,
-  emailError: PropTypes.string,
-  fetching: PropTypes.bool,
-  handleInputsChange: PropTypes.func,
-  handleSubmit: PropTypes.func,
-  isError: PropTypes.bool,
-  loginError: PropTypes.string,
-  password: PropTypes.string,
-  passwordError: PropTypes.string,
-  onKeyPress: PropTypes.func,
-  serverError: PropTypes.string
+  email: PropTypes.string.isRequired,
+  emailError: PropTypes.string.isRequired,
+  fetching: PropTypes.bool.isRequired,
+  handleInputsChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  isError: PropTypes.bool.isRequired,
+  loginError: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+  passwordError: PropTypes.string.isRequired,
+  onKeyPress: PropTypes.func.isRequired,
+  serverError: PropTypes.string.isRequired
 };

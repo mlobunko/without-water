@@ -46,7 +46,7 @@ export default connect(
 )(ProfileContainer);
 
 ProfileContainer.propTypes = {
-  city: PropTypes.string,
-  fetching: PropTypes.bool,
-  errorState: PropTypes.object
+  city: PropTypes.string.isRequired,
+  fetching: PropTypes.bool.isRequired,
+  errorState: PropTypes.object.isRequired
 };

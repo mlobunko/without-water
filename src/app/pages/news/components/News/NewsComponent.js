@@ -26,7 +26,7 @@ export const NewsComponent = ({ fetching, isError, serverError }) => (
 export default NewsComponent;
 
 NewsComponent.propTypes = {
-  fetching: PropTypes.bool,
-  isError: PropTypes.bool,
+  fetching: PropTypes.bool.isRequired,
+  isError: PropTypes.bool.isRequired,
   serverError: PropTypes.string
 };

@@ -15,5 +15,5 @@ export const CityComponent = ({ city }) => (
 export default CityComponent;
 
 CityComponent.propTypes = {
-  city: PropTypes.string
+  city: PropTypes.string.isRequired
 };

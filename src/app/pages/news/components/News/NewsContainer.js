@@ -44,7 +44,7 @@ export default connect(
 )(NewsContainer);
 
 NewsContainer.propTypes = {
-  fetching: PropTypes.bool,
-  errorState: PropTypes.object,
-  news: PropTypes.array
+  fetching: PropTypes.bool.isRequired,
+  errorState: PropTypes.object.isRequired,
+  news: PropTypes.array.isRequired
 };
