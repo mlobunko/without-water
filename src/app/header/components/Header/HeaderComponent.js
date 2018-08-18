@@ -12,10 +12,14 @@ export const HeaderComponent = ({
   toggle
 }) => (
   <Navbar color="dark" dark expand="md">
-    <LinkContainer to="/">
+    <LinkContainer to="/" aria-label="Home">
       <StyledNavbarBrand />
     </LinkContainer>
-    <NavbarToggler onClick={toggle} className="mr-2" />
+    <NavbarToggler
+      aria-label="toggle drop menu"
+      onClick={toggle}
+      className="mr-2"
+    />
     <Collapse isOpen={isOpen} navbar>
       <Nav className="ml-auto" navbar>
         <LinkContainer to="/news" activeClassName="active">
