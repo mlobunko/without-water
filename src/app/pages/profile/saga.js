@@ -24,13 +24,13 @@ export const fetchProfile = function*() {
         yield put(actions.addLanguages(languages));
         yield put(actions.addSocial(social));
       } else {
-        yield error.saga.errorHandler({
+        yield call(error.saga.errorHandler, {
           login: true,
           message: constants.ERROR_TRANSLATE[data.message]
         });
       }
     } catch (e) {
-      yield error.saga.errorHandler({ loading: true });
+      yield call(error.saga.errorHandler, { loading: true });
     }
   }
 };

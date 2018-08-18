@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders correctly 1`] = `
+<Fragment>
+  <styled.div>
+    <Styled(Jumbotron)
+      key="123"
+    >
+      <styled.h3>
+        123
+      </styled.h3>
+      <p>
+        hola
+      </p>
+    </Styled(Jumbotron)>
+  </styled.div>
+  <Component
+    total={1}
+  />
+</Fragment>
+`;

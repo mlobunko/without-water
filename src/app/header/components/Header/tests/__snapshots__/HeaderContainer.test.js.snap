@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders correctly 1`] = `
+<div>
+  <Component
+    authorized={true}
+    authorizedActionsLogOut={[Function]}
+    isOpen={false}
+    toggle={[Function]}
+  />
+</div>
+`;

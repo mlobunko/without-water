@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader component renders properly default 1`] = `
+<styled.div>
+  <styled.div />
+</styled.div>
+`;
+
+exports[`Loader component renders properly with full props 1`] = `
+<styled.div
+  centerPage={true}
+>
+  <styled.div
+    login={true}
+  />
+</styled.div>
+`;

@@ -3,7 +3,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 import PropTypes from 'prop-types';
 
-import { StyledNavbarBrand, StyledNavLink } from '../../styles';
+import { StyledNavbarBrand, StyledNavLink } from './styles';
 
 export const HeaderComponent = ({
   authorized,

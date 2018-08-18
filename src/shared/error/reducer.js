@@ -1,6 +1,6 @@
 import * as t from './actionTypes';
 
-const initialState = {
+export const initialState = {
   isError: false,
   loginError: '',
   serverError: ''

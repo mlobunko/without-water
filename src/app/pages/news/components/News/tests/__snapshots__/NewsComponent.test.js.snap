@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders Alert 1`] = `
+<styled.div>
+  <div>
+    <Component
+      text="News"
+    />
+  </div>
+  <Component
+    centerPage={true}
+    color="danger"
+    textError="textError"
+  />
+</styled.div>
+`;
+
+exports[`render renders Articles 1`] = `
+<styled.div>
+  <div>
+    <Component
+      text="News"
+    />
+  </div>
+  <Connect(Component) />
+</styled.div>
+`;
+
+exports[`render renders Loader 1`] = `
+<styled.div>
+  <div>
+    <Component
+      text="News"
+    />
+  </div>
+  <Component
+    centerPage={true}
+  />
+</styled.div>
+`;

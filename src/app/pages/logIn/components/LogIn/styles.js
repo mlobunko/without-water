@@ -9,3 +9,5 @@ export const StyledForm = styled.form`
   width: 90%;
   max-width: 400px;
 `;
+
+StyledForm.displayName = 'StyledForm';

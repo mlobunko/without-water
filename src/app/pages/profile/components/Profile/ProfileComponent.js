@@ -10,13 +10,14 @@ import Languages from '../languages/components';
 import { StyledProfileComponent } from '../../styles';
 
 export const ProfileComponent = ({
+  city,
   fetching,
   isError,
   loginError,
   serverError
 }) => (
   <React.Fragment>
-    {fetching ? (
+    {!city && fetching ? (
       <Loader centerPage />
     ) : !isError ? (
       <StyledProfileComponent>
@@ -34,8 +35,9 @@ export const ProfileComponent = ({
 export default ProfileComponent;
 
 ProfileComponent.propTypes = {
+  city: PropTypes.string,
   fetching: PropTypes.bool.isRequired,
-  isError: PropTypes.bool.isRequired,
+  isError: PropTypes.bool,
   loginError: PropTypes.string,
   serverError: PropTypes.string
 };

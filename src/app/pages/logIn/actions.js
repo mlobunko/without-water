@@ -1,10 +1,10 @@
 import * as t from './actionTypes';
 
-export const set = id => {
-  localStorage.setItem('logIn', `${id}`);
+export const set = logIn => {
+  localStorage.setItem('logIn', `${logIn}`);
   return {
     type: t.SET,
-    id
+    logIn
   };
 };
 

@@ -19,6 +19,7 @@ export class ProfileContainer extends React.Component {
   render() {
     return (
       <ProfileComponent
+        city={this.props.city}
         fetching={this.props.fetching}
         isError={this.props.errorState.isError}
         languages={this.props.languages}
@@ -48,5 +49,9 @@ export default connect(
 ProfileContainer.propTypes = {
   city: PropTypes.string.isRequired,
   fetching: PropTypes.bool.isRequired,
-  errorState: PropTypes.object.isRequired
+  errorState: PropTypes.shape({
+    isError: PropTypes.bool.isRequired,
+    loginError: PropTypes.string,
+    serverError: PropTypes.string
+  })
 };

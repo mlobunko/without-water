@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainComponent renders correctly 1`] = `
+<styled.div>
+  <withRouter(Connect(HeaderContainer)) />
+  <Switch>
+    <Component
+      authorized={true}
+      exact={true}
+      isRedirect={true}
+      key="0"
+      path="/"
+      redirectTo="/news"
+    />
+    <Component
+      authorized={true}
+      component={[Function]}
+      key="1"
+      path="/login"
+    />
+    <Component
+      authorized={true}
+      component={[Function]}
+      key="2"
+      path="/news"
+    />
+    <Component
+      authorized={true}
+      component={[Function]}
+      isPrivate={true}
+      key="3"
+      path="/profile"
+    />
+    <Component
+      authorized={true}
+      component={[Function]}
+      key="4"
+    />
+  </Switch>
+</styled.div>
+`;

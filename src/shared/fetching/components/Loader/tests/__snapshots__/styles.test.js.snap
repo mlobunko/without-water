@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledImage component renders properly default 1`] = `
+.c0 {
+  background: url(loader.svg) no-repeat center center;
+  background-size: contain;
+  height: 3rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`StyledImage component renders properly with login 1`] = `
+.c0 {
+  background: url(loader.svg) no-repeat center center;
+  background-size: contain;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`StyledLoader component renders properly default 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`StyledLoader component renders properly with centerPage 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60vh;
+}
+
+<div
+  className="c0"
+/>
+`;

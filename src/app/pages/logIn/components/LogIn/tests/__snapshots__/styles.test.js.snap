@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledButton renders correctly 1`] = `
+.c0 {
+  text-align: center;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`StyledForm renders correctly 1`] = `
+.c0 {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
+}
+
+<form
+  className="c0"
+/>
+`;

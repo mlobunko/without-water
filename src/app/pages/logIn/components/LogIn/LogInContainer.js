@@ -32,7 +32,7 @@ export class LogInContainer extends React.Component {
     } else return null;
   }
 
-  setStateErrosToNull = () => {
+  setStateErrorsToNull = () => {
     this.setState({
       emailError: '',
       passwordError: ''
@@ -44,7 +44,7 @@ export class LogInContainer extends React.Component {
       this.props.errorActionsSetNull();
     }
     if (!!this.state.emailError || !!this.state.passwordError) {
-      this.setStateErrosToNull();
+      this.setStateErrorsToNull();
     }
     const value = e.currentTarget.value;
     const idTarget = e.currentTarget.id;
@@ -124,5 +124,9 @@ export default withRouter(
 LogInContainer.propTypes = {
   authorized: PropTypes.bool.isRequired,
   fetching: PropTypes.bool.isRequired,
-  errorState: PropTypes.object.isRequired
+  errorState: PropTypes.shape({
+    isError: PropTypes.bool.isRequired,
+    loginError: PropTypes.string,
+    serverError: PropTypes.string
+  })
 };

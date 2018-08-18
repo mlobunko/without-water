@@ -8,8 +8,7 @@ export const logIn = () => {
 };
 
 export const logOut = () => {
-  localStorage.removeItem('authorized');
-  localStorage.removeItem('logIn');
+  localStorage.clear();
   return {
     type: t.LOG_OUT
   };

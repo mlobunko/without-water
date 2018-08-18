@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders correctly 1`] = `
+<Component
+  city="London"
+  fetching={true}
+  isError={true}
+  loginError="error"
+  serverError="error"
+/>
+`;

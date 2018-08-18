@@ -1,11 +1,13 @@
 import { take, call, put } from 'redux-saga/effects';
+
+import authorized from 'shared/authorized';
+import error from 'shared/error';
+import fetching from 'shared/fetching';
+
 import * as actions from './actions';
 import * as t from './actionTypes';
 import * as constants from './constants';
 import * as model from './model';
-import authorized from 'shared/authorized';
-import error from 'shared/error';
-import fetching from 'shared/fetching';
 
 export const submitLogIn = function*() {
   while (true) {
@@ -23,13 +25,13 @@ export const submitLogIn = function*() {
         yield put(authorized.actions.logIn());
         yield put(actions.set(data.data.id));
       } else {
-        yield error.saga.errorHandler({
+        yield call(error.saga.errorHandler, {
           login: true,
           message: constants.ERROR_TRANSLATE[data.message]
         });
       }
     } catch (e) {
-      yield error.saga.errorHandler({ loading: true });
+      yield call(error.saga.errorHandler, { loading: true });
     }
   }
 };

@@ -22,6 +22,7 @@ export class NewsContainer extends React.Component {
       <NewsComponent
         fetching={this.props.fetching}
         isError={this.props.errorState.isError}
+        news={this.props.news}
         serverError={this.props.errorState.serverError}
       />
     );
@@ -45,6 +46,15 @@ export default connect(
 
 NewsContainer.propTypes = {
   fetching: PropTypes.bool.isRequired,
-  errorState: PropTypes.object.isRequired,
-  news: PropTypes.array.isRequired
+  errorState: PropTypes.shape({
+    isError: PropTypes.bool.isRequired,
+    loginError: PropTypes.string,
+    serverError: PropTypes.string
+  }),
+  news: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })
+  )
 };

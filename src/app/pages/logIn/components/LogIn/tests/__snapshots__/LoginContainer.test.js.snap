@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders correctly 1`] = `
+<Component
+  email=""
+  emailError=""
+  fetching={false}
+  handleInputsChange={[Function]}
+  handleSubmit={[Function]}
+  isError={false}
+  loginError=""
+  onKeyPress={[Function]}
+  password=""
+  passwordError=""
+  serverError=""
+/>
+`;

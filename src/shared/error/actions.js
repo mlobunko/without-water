@@ -10,7 +10,6 @@ export const setServer = error => ({
   error
 });
 
-export const setNull = error => ({
-  type: t.SET_NULL,
-  error
+export const setNull = () => ({
+  type: t.SET_NULL
 });

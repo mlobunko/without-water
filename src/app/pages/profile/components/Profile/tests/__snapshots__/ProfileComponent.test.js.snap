@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render render Alert 1`] = `
+<Fragment>
+  <Component
+    centerPage={true}
+    color="danger"
+    textError="error"
+  />
+</Fragment>
+`;
+
+exports[`render render Loader 1`] = `
+<Fragment>
+  <Component
+    centerPage={true}
+  />
+</Fragment>
+`;
+
+exports[`render render StyledProfileComponent 1`] = `
+<Fragment>
+  <styled.div>
+    <Component />
+    <Connect(Component) />
+    <Connect(Component) />
+    <Connect(Component) />
+  </styled.div>
+</Fragment>
+`;

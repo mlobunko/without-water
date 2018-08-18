@@ -8,12 +8,12 @@ import HeaderH1 from 'app/header/components/HeaderH1';
 import Articles from '../Articles';
 import { StyledNewsComponent } from './styles';
 
-export const NewsComponent = ({ fetching, isError, serverError }) => (
+export const NewsComponent = ({ fetching, isError, news, serverError }) => (
   <StyledNewsComponent>
     <div>
       <HeaderH1 text={'News'} />
     </div>
-    {fetching ? (
+    {!news.length && fetching ? (
       <Loader centerPage />
     ) : !isError ? (
       <Articles />
@@ -28,5 +28,11 @@ export default NewsComponent;
 NewsComponent.propTypes = {
   fetching: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
+  news: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })
+  ),
   serverError: PropTypes.string
 };

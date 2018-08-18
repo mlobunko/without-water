@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`alert under the email render emailError is true 1`] = `
+<Component
+  color="danger"
+  textError="emailError"
+/>
+`;
+
+exports[`alert under the password render isError is true loginError 1`] = `
+<Component
+  color="danger"
+  textError="loginError"
+/>
+`;
+
+exports[`alert under the password render isError is true serverError 1`] = `
+<Component
+  color="danger"
+  textError="serverError"
+/>
+`;
+
+exports[`alert under the password render passwordError is true 1`] = `
+<Component
+  color="danger"
+  textError="passwordError"
+/>
+`;
+
+exports[`form render renders correctly 1`] = `
+<Fragment>
+  <Component
+    text="Log In"
+  />
+  <StyledForm
+    onSubmit={[Function]}
+  >
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        htmlFor="email"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Email
+      </Label>
+      <Input
+        autoComplete="on"
+        id="email"
+        invalid={false}
+        onChange={[Function]}
+        placeholder="Enter email"
+        type="text"
+        value="fa@fa.com"
+      />
+    </FormGroup>
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        htmlFor="password"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Password
+      </Label>
+      <Input
+        autoComplete="on"
+        id="password"
+        invalid={false}
+        onChange={[Function]}
+        placeholder="Enter password"
+        type="password"
+        value="123456"
+      />
+    </FormGroup>
+    <Component
+      color="dark"
+      disabled={false}
+      outline={true}
+      text="Log In"
+      type="submit"
+    />
+  </StyledForm>
+</Fragment>
+`;
+
+exports[`input email invalid emailError is true renders correctly 1`] = `
+<Input
+  autoComplete="on"
+  id="email"
+  invalid={true}
+  onChange={[Function]}
+  placeholder="Enter email"
+  type="text"
+  value="fa@fa.com"
+/>
+`;
+
+exports[`input email invalid emailError, loginError are false renders correctly 1`] = `
+<Input
+  autoComplete="on"
+  id="email"
+  invalid={false}
+  onChange={[Function]}
+  placeholder="Enter email"
+  type="text"
+  value="fa@fa.com"
+/>
+`;
+
+exports[`input email invalid loginError is true renders correctly 1`] = `
+<Input
+  autoComplete="on"
+  id="email"
+  invalid={true}
+  onChange={[Function]}
+  placeholder="Enter email"
+  type="text"
+  value="fa@fa.com"
+/>
+`;
+
+exports[`input password invalid emailError, loginError are false renders correctly 1`] = `
+<Input
+  autoComplete="on"
+  id="password"
+  invalid={false}
+  onChange={[Function]}
+  placeholder="Enter password"
+  type="password"
+  value="123456"
+/>
+`;
+
+exports[`input password invalid loginError is true renders correctly 1`] = `
+<Input
+  autoComplete="on"
+  id="password"
+  invalid={true}
+  onChange={[Function]}
+  placeholder="Enter password"
+  type="password"
+  value="123456"
+/>
+`;
+
+exports[`input password invalid passwordError is true renders correctly 1`] = `
+<Input
+  autoComplete="on"
+  id="password"
+  invalid={true}
+  onChange={[Function]}
+  placeholder="Enter password"
+  type="password"
+  value="123456"
+/>
+`;
+
+exports[`submit button render fetching is false 1`] = `
+<Component
+  color="dark"
+  disabled={false}
+  outline={true}
+  text="Log In"
+  type="submit"
+/>
+`;
+
+exports[`submit button render fetching is true 1`] = `
+<Component
+  color="dark"
+  disabled={true}
+  outline={true}
+  text="Log In"
+  type="submit"
+/>
+`;

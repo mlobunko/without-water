@@ -1,4 +1,5 @@
 import { take, call, put } from 'redux-saga/effects';
+
 import * as t from './actionTypes';
 import * as actions from './actions';
 import * as constants from './constants';
@@ -16,10 +17,10 @@ export const fetchNews = function*() {
       if (data.status === 'ok') {
         yield put(actions.add(data.data));
       } else {
-        yield error.saga.errorHandler();
+        yield call(error.saga.errorHandler);
       }
     } catch (e) {
-      yield error.saga.errorHandler({ loading: true });
+      yield call(error.saga.errorHandler, { loading: true });
     }
   }
 };

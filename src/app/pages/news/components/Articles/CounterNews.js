@@ -12,5 +12,5 @@ export const CounterNews = ({ total }) => (
 export default CounterNews;
 
 CounterNews.propTypes = {
-  total: PropTypes.number
+  total: PropTypes.number.isRequired
 };

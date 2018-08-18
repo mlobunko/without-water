@@ -27,6 +27,11 @@ export const SocialComponent = ({ social, getIconByName }) => (
 export default SocialComponent;
 
 SocialComponent.propTypes = {
-  social: PropTypes.array.isRequired,
+  social: PropTypes.arrayOf(
+    PropTypes.shape({
+      link: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
+    })
+  ),
   getIconByName: PropTypes.func.isRequired
 };

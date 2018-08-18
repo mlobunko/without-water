@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledHeader renders correctly 1`] = `
+.c0 {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+<h5
+  className="c0"
+/>
+`;
+
+exports[`StyledSocialComponent renders correctly 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+<div
+  className="c0"
+/>
+`;

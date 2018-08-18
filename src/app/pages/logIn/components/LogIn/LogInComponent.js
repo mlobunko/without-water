@@ -27,7 +27,6 @@ export const LogInComponent = ({
     <StyledForm
       onSubmit={handleSubmit}
       onKeyPress={fetching ? onKeyPress : undefined}
-      className="login-form"
     >
       <FormGroup>
         <Label htmlFor="email">Email</Label>
@@ -40,7 +39,7 @@ export const LogInComponent = ({
           onChange={handleInputsChange}
           invalid={!!loginError || !!emailError}
         />
-        {emailError && <Alert color="danger" textError={emailError} />}
+        {!!emailError && <Alert color="danger" textError={emailError} />}
       </FormGroup>
       <FormGroup>
         <Label htmlFor="password">Password</Label>

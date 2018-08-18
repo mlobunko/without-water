@@ -22,5 +22,10 @@ export const ArticlesComponent = ({ news }) => (
 export default ArticlesComponent;
 
 ArticlesComponent.propTypes = {
-  news: PropTypes.array
+  news: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })
+  )
 };

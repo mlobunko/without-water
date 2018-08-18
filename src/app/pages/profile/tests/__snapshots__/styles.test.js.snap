@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledFontAwesomeIcon renders correctly 1`] = `
+.c0 {
+  color: rgb(52,58,64);
+}
+
+<FontAwesomeIcon
+  border={false}
+  className="c0"
+  fixedWidth={false}
+  flip={null}
+  icon={null}
+  inverse={false}
+  listItem={false}
+  mask={null}
+  pull={null}
+  pulse={false}
+  rotation={null}
+  size={null}
+  spin={false}
+  symbol={false}
+  transform={null}
+/>
+`;
+
+exports[`StyledProfileComponent renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 95vw;
+  max-width: 500px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`StyledSocialFontAwesomeIcon renders correctly 1`] = `
+.c0.c0 {
+  color: rgb(52,58,64);
+}
+
+.c0.c0:hover {
+  color: rgb(161,164,165);
+}
+
+.c0.c0:active {
+  color: rgb(161,164,165);
+}
+
+<FontAwesomeIcon
+  border={false}
+  className="c0"
+  fixedWidth={false}
+  flip={null}
+  icon={null}
+  inverse={false}
+  listItem={false}
+  mask={null}
+  pull={null}
+  pulse={false}
+  rotation={null}
+  size={null}
+  spin={false}
+  symbol={false}
+  transform={null}
+/>
+`;
+
+exports[`StyledUserImage renders correctly 1`] = `
+.c0 {
+  background: url(imageUser.svg) no-repeat center center;
+  background-size: contain;
+  height: 7rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+<div
+  className="c0"
+/>
+`;
