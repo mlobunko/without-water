@@ -1,3 +1,5 @@
+import { REPO_NAME } from './constants';
+
 import LogIn from 'app/pages/logIn/components/LogIn';
 import News from 'app/pages/news/components/News';
 import NotFound from 'app/pages/notFound/components';
@@ -7,19 +9,25 @@ export const Routes = [
   {
     path: '/',
     isRedirect: true,
-    redirectTo: '/news',
+    redirectTo: `${REPO_NAME}/news`,
     exact: true
   },
   {
-    path: '/login',
+    path: `${REPO_NAME}`,
+    isRedirect: true,
+    redirectTo: `${REPO_NAME}/news`,
+    exact: true
+  },
+  {
+    path: `${REPO_NAME}/login`,
     component: LogIn
   },
   {
-    path: '/news',
+    path: `${REPO_NAME}/news`,
     component: News
   },
   {
-    path: '/profile',
+    path: `${REPO_NAME}/profile`,
     component: Profile,
     isPrivate: true
   },

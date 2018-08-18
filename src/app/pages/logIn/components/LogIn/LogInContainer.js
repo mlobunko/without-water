@@ -7,6 +7,7 @@ import * as model from '../../model';
 import * as actions from '../../actions';
 import * as constants from '../../constants';
 import LogInComponent from './LogInComponent';
+import { REPO_NAME } from 'main/constants';
 
 import authorized from 'shared/authorized';
 import fetching from 'shared/fetching';
@@ -80,7 +81,9 @@ export class LogInContainer extends React.Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/' } };
+    const { from } = this.props.location.state || {
+      from: { pathname: `${REPO_NAME}/` }
+    };
     if (this.props.authorized) {
       return <Redirect to={from} />;
     }
