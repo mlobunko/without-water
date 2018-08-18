@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore(preloadedState);
 
-const jsx = (
+export const jsx = (
   <Provider store={store}>
     <BrowserRouter>
       <Main />
