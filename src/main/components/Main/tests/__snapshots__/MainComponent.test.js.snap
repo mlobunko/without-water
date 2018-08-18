@@ -10,31 +10,39 @@ exports[`MainComponent renders correctly 1`] = `
       isRedirect={true}
       key="0"
       path="/"
-      redirectTo="/news"
+      redirectTo="/without-water/news"
     />
     <Component
       authorized={true}
-      component={[Function]}
+      exact={true}
+      isRedirect={true}
       key="1"
-      path="/login"
+      path="/without-water"
+      redirectTo="/without-water/news"
     />
     <Component
       authorized={true}
       component={[Function]}
       key="2"
-      path="/news"
+      path="/without-water/login"
+    />
+    <Component
+      authorized={true}
+      component={[Function]}
+      key="3"
+      path="/without-water/news"
     />
     <Component
       authorized={true}
       component={[Function]}
       isPrivate={true}
-      key="3"
-      path="/profile"
+      key="4"
+      path="/without-water/profile"
     />
     <Component
       authorized={true}
       component={[Function]}
-      key="4"
+      key="5"
     />
   </Switch>
 </styled.div>
