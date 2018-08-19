@@ -45,10 +45,6 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "src"
     ]
   },
   "scripts": {
