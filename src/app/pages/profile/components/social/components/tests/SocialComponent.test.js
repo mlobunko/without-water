@@ -3,14 +3,14 @@ import { shallow } from 'enzyme';
 
 import { SocialComponent } from '../SocialComponent';
 import { NAME } from '../../../../constants';
-import social from '../../../social';
+import * as constants from '../../constants';
 import * as model from '../../../../model';
 import { getSocialWebFirst } from '../../../../selectors';
 
 describe('render', () => {
   const state = {
     [NAME]: {
-      [social.constants.NAME]: [
+      [constants.NAME]: [
         { label: 'vk', link: '123' },
         { label: 'web', link: '321' }
       ]
@@ -23,6 +23,7 @@ describe('render', () => {
         social={getSocialWebFirst(state)}
       />
     );
+    console.log(wrapper.debug());
     expect(wrapper).toMatchSnapshot();
   });
 });
