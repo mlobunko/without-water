@@ -23,7 +23,6 @@ describe('render', () => {
         social={getSocialWebFirst(state)}
       />
     );
-    console.log(wrapper.debug());
     expect(wrapper).toMatchSnapshot();
   });
 });
