@@ -2,7 +2,7 @@
 
 exports[`render render Alert 1`] = `
 <Fragment>
-  <Component
+  <Alert
     centerPage={true}
     color="danger"
     textError="error"

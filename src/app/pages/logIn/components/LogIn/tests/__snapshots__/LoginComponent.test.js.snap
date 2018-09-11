@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`alert under the email render emailError is true 1`] = `
-<Component
+<Alert
   color="danger"
   textError="emailError"
 />
 `;
 
 exports[`alert under the password render isError is true loginError 1`] = `
-<Component
+<Alert
   color="danger"
   textError="loginError"
 />
 `;
 
 exports[`alert under the password render isError is true serverError 1`] = `
-<Component
+<Alert
   color="danger"
   textError="serverError"
 />
 `;
 
 exports[`alert under the password render passwordError is true 1`] = `
-<Component
+<Alert
   color="danger"
   textError="passwordError"
 />

@@ -10,6 +10,8 @@ export const Alert = ({ color, textError, centerPage }) => (
   </AlertStyled>
 );
 
+Alert.displayName = 'Alert';
+
 export default Alert;
 
 Alert.propTypes = {

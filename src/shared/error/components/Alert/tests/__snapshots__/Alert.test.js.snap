@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert component renders properly centerPage false 1`] = `
-<styled.div
+<AlertStyled
   centerPage={false}
 >
   <Alert
@@ -33,11 +33,11 @@ exports[`Alert component renders properly centerPage false 1`] = `
   >
     error
   </Alert>
-</styled.div>
+</AlertStyled>
 `;
 
 exports[`Alert component renders properly centerPage true 1`] = `
-<styled.div
+<AlertStyled
   centerPage={true}
 >
   <Alert
@@ -69,5 +69,5 @@ exports[`Alert component renders properly centerPage true 1`] = `
   >
     error
   </Alert>
-</styled.div>
+</AlertStyled>
 `;

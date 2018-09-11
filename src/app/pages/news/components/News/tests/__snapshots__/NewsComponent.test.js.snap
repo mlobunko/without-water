@@ -7,7 +7,7 @@ exports[`render renders Alert 1`] = `
       text="News"
     />
   </div>
-  <Component
+  <Alert
     centerPage={true}
     color="danger"
     textError="textError"

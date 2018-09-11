@@ -12,6 +12,7 @@ export const AlertStyled = styled.div`
       height: 60vh;
     `};
 `;
+AlertStyled.displayName = 'AlertStyled';
 
 AlertStyled.propTypes = {
   centerPage: PropTypes.bool
