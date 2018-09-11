@@ -8,9 +8,11 @@ export const StyledNavbarBrand = styled(NavbarBrand)`
   height: 2.5rem;
   width: 2.5rem;
 `;
+StyledNavbarBrand.displayName = 'StyledNavbarBrand';
 
 export const StyledNavLink = styled(NavLink)`
   &:hover {
     cursor: pointer;
   }
 `;
+StyledNavLink.displayName = 'StyledNavLink';

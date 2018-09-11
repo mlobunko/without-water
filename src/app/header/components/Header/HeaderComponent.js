@@ -51,6 +51,7 @@ export const HeaderComponent = ({
     </Collapse>
   </Navbar>
 );
+HeaderComponent.displayName = 'HeaderComponent';
 
 export default HeaderComponent;
 

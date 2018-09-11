@@ -15,7 +15,7 @@ exports[`render renders correctly if authorized false 1`] = `
     strict={false}
     to="/without-water/"
   >
-    <Styled(NavbarBrand) />
+    <StyledNavbarBrand />
   </LinkContainer>
   <NavbarToggler
     aria-label="toggle drop menu"
@@ -58,9 +58,9 @@ exports[`render renders correctly if authorized false 1`] = `
         <NavItem
           tag="li"
         >
-          <Styled(NavLink)>
+          <StyledNavLink>
             News
-          </Styled(NavLink)>
+          </StyledNavLink>
         </NavItem>
       </LinkContainer>
       <LinkContainer
@@ -73,9 +73,9 @@ exports[`render renders correctly if authorized false 1`] = `
         <NavItem
           tag="li"
         >
-          <Styled(NavLink)>
+          <StyledNavLink>
             Profile
-          </Styled(NavLink)>
+          </StyledNavLink>
         </NavItem>
       </LinkContainer>
       <LinkContainer
@@ -88,9 +88,9 @@ exports[`render renders correctly if authorized false 1`] = `
         <NavItem
           tag="li"
         >
-          <Styled(NavLink)>
+          <StyledNavLink>
             Log in
-          </Styled(NavLink)>
+          </StyledNavLink>
         </NavItem>
       </LinkContainer>
     </Nav>
@@ -113,7 +113,7 @@ exports[`render renders correctly if authorized true 1`] = `
     strict={false}
     to="/without-water/"
   >
-    <Styled(NavbarBrand) />
+    <StyledNavbarBrand />
   </LinkContainer>
   <NavbarToggler
     aria-label="toggle drop menu"
@@ -156,9 +156,9 @@ exports[`render renders correctly if authorized true 1`] = `
         <NavItem
           tag="li"
         >
-          <Styled(NavLink)>
+          <StyledNavLink>
             News
-          </Styled(NavLink)>
+          </StyledNavLink>
         </NavItem>
       </LinkContainer>
       <LinkContainer
@@ -171,9 +171,9 @@ exports[`render renders correctly if authorized true 1`] = `
         <NavItem
           tag="li"
         >
-          <Styled(NavLink)>
+          <StyledNavLink>
             Profile
-          </Styled(NavLink)>
+          </StyledNavLink>
         </NavItem>
       </LinkContainer>
       <LinkContainer
@@ -187,9 +187,9 @@ exports[`render renders correctly if authorized true 1`] = `
           onClick={[Function]}
           tag="li"
         >
-          <Styled(NavLink)>
+          <StyledNavLink>
             Log out
-          </Styled(NavLink)>
+          </StyledNavLink>
         </NavItem>
       </LinkContainer>
     </Nav>

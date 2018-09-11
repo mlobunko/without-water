@@ -2,7 +2,7 @@
 
 exports[`render renders correctly 1`] = `
 <div>
-  <Component
+  <HeaderComponent
     authorized={true}
     authorizedActionsLogOut={[Function]}
     isOpen={false}

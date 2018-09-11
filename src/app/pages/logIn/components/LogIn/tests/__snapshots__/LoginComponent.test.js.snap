@@ -30,7 +30,7 @@ exports[`alert under the password render passwordError is true 1`] = `
 
 exports[`form render renders correctly 1`] = `
 <Fragment>
-  <Component
+  <HeaderH1
     text="Log In"
   />
   <StyledForm

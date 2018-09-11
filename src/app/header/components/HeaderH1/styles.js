@@ -5,3 +5,5 @@ export const StyledHeaderH1 = styled.h1`
   margin-top: 1rem;
   margin-bottom: 3rem;
 `;
+
+StyledHeaderH1.displayName = 'StyledHeaderH1';

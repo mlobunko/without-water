@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render renders correctly 1`] = `
-<styled.h1>
+<StyledHeaderH1>
   hola
-</styled.h1>
+</StyledHeaderH1>
 `;

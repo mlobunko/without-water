@@ -3,7 +3,7 @@
 exports[`render renders Alert 1`] = `
 <styled.div>
   <div>
-    <Component
+    <HeaderH1
       text="News"
     />
   </div>
@@ -18,7 +18,7 @@ exports[`render renders Alert 1`] = `
 exports[`render renders Articles 1`] = `
 <styled.div>
   <div>
-    <Component
+    <HeaderH1
       text="News"
     />
   </div>
@@ -29,7 +29,7 @@ exports[`render renders Articles 1`] = `
 exports[`render renders Loader 1`] = `
 <styled.div>
   <div>
-    <Component
+    <HeaderH1
       text="News"
     />
   </div>
