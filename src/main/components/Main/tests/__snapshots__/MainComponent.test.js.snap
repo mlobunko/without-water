@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainComponent renders correctly 1`] = `
-<styled.div>
+<StyledMainComponent>
   <withRouter(Connect(HeaderContainer)) />
   <Switch>
     <Component
@@ -45,5 +45,5 @@ exports[`MainComponent renders correctly 1`] = `
       key="5"
     />
   </Switch>
-</styled.div>
+</StyledMainComponent>
 `;

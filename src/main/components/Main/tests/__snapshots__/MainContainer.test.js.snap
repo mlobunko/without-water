@@ -2,7 +2,7 @@
 
 exports[`MainContainer renders correctly 1`] = `
 <ErrorBoundary>
-  <Component
+  <MainComponent
     authorized={true}
   />
 </ErrorBoundary>

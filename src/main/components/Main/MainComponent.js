@@ -18,6 +18,7 @@ export const MainComponent = ({ authorized }) => (
     </Switch>
   </StyledMainComponent>
 );
+MainComponent.displayName = 'MainComponent';
 
 export default MainComponent;
 
