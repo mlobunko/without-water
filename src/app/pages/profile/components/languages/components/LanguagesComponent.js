@@ -14,6 +14,8 @@ export const LanguagesComponent = ({ languages }) => (
   </div>
 );
 
+LanguagesComponent.displayName = 'LanguagesComponent';
+
 export default LanguagesComponent;
 
 LanguagesComponent.propTypes = {

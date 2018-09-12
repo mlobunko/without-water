@@ -14,6 +14,8 @@ export const CityComponent = ({ city }) => (
 
 export default CityComponent;
 
+CityComponent.displayName = 'CityComponent';
+
 CityComponent.propTypes = {
   city: PropTypes.string.isRequired
 };

@@ -24,6 +24,8 @@ export const SocialComponent = ({ social, getIconByName }) => (
   </React.Fragment>
 );
 
+SocialComponent.displayName = 'SocialComponent';
+
 export default SocialComponent;
 
 SocialComponent.propTypes = {

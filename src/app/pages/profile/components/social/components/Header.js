@@ -5,6 +5,8 @@ import { StyledHeader } from './styles';
 
 export const Header = ({ text }) => <StyledHeader>{text}</StyledHeader>;
 
+Header.displayName = 'Header';
+
 export default Header;
 
 Header.propTypes = {

@@ -32,6 +32,8 @@ export const ProfileComponent = ({
   </React.Fragment>
 );
 
+ProfileComponent.displayName = 'ProfileComponent';
+
 export default ProfileComponent;
 
 ProfileComponent.propTypes = {

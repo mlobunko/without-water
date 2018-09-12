@@ -2,10 +2,10 @@
 
 exports[`render renders correctly 1`] = `
 <Fragment>
-  <Component
+  <Header
     text="Social"
   />
-  <styled.div>
+  <StyledSocialComponent>
     <div
       key="0"
     >
@@ -15,7 +15,7 @@ exports[`render renders correctly 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Styled(FontAwesomeIcon)
+        <StyledSocialComponent
           icon={
             Object {
               "icon": Array [
@@ -41,7 +41,7 @@ exports[`render renders correctly 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Styled(FontAwesomeIcon)
+        <StyledSocialComponent
           icon={
             Object {
               "icon": Array [
@@ -58,6 +58,6 @@ exports[`render renders correctly 1`] = `
         />
       </a>
     </div>
-  </styled.div>
+  </StyledSocialComponent>
 </Fragment>
 `;
