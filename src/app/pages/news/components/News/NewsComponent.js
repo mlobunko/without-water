@@ -22,6 +22,7 @@ export const NewsComponent = ({ fetching, isError, news, serverError }) => (
     )}
   </StyledNewsComponent>
 );
+NewsComponent.displayName = 'NewsComponent';
 
 export default NewsComponent;
 

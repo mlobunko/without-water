@@ -5,5 +5,6 @@ import { errorMessage } from '../constants';
 export const NotFound = () => (
   <Alert color="danger" textError={errorMessage} centerPage />
 );
+NotFound.displayName = 'NotFound';
 
 export default NotFound;

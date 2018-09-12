@@ -92,7 +92,7 @@ exports[`form render renders correctly 1`] = `
         value="123456"
       />
     </FormGroup>
-    <Component
+    <Button
       color="dark"
       disabled={false}
       outline={true}
@@ -176,7 +176,7 @@ exports[`input password invalid passwordError is true renders correctly 1`] = `
 `;
 
 exports[`submit button render fetching is false 1`] = `
-<Component
+<Button
   color="dark"
   disabled={false}
   outline={true}
@@ -186,7 +186,7 @@ exports[`submit button render fetching is false 1`] = `
 `;
 
 exports[`submit button render fetching is true 1`] = `
-<Component
+<Button
   color="dark"
   disabled={true}
   outline={true}

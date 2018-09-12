@@ -5,3 +5,4 @@ export const StyledNewsComponent = styled.div`
   display: flex;
   flex-direction: column;
 `;
+StyledNewsComponent.displayName = 'StyledNewsComponent';

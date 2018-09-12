@@ -18,6 +18,7 @@ export const ArticlesComponent = ({ news }) => (
     <CounterNews total={news.length} />
   </React.Fragment>
 );
+ArticlesComponent.displayName = 'ArticlesComponent';
 
 export default ArticlesComponent;
 

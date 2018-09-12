@@ -9,6 +9,8 @@ export const CounterNews = ({ total }) => (
   </StyledCounterNews>
 );
 
+CounterNews.displayName = 'CounterNews';
+
 export default CounterNews;
 
 CounterNews.propTypes = {

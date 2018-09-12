@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render renders Alert 1`] = `
-<styled.div>
+<StyledNewsComponent>
   <div>
     <HeaderH1
       text="News"
@@ -12,22 +12,22 @@ exports[`render renders Alert 1`] = `
     color="danger"
     textError="textError"
   />
-</styled.div>
+</StyledNewsComponent>
 `;
 
 exports[`render renders Articles 1`] = `
-<styled.div>
+<StyledNewsComponent>
   <div>
     <HeaderH1
       text="News"
     />
   </div>
-  <Connect(Component) />
-</styled.div>
+  <Connect(ArticlesComponent) />
+</StyledNewsComponent>
 `;
 
 exports[`render renders Loader 1`] = `
-<styled.div>
+<StyledNewsComponent>
   <div>
     <HeaderH1
       text="News"
@@ -36,5 +36,5 @@ exports[`render renders Loader 1`] = `
   <Component
     centerPage={true}
   />
-</styled.div>
+</StyledNewsComponent>
 `;

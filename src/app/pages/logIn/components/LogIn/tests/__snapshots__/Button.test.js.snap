@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render renders correctly 1`] = `
-<styled.div>
+<StyledButton>
   <Button
     color="dark"
     disabled={false}
@@ -11,5 +11,5 @@ exports[`render renders correctly 1`] = `
   >
     Log In
   </Button>
-</styled.div>
+</StyledButton>
 `;

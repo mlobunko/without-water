@@ -2,19 +2,19 @@
 
 exports[`render renders correctly 1`] = `
 <Fragment>
-  <styled.div>
-    <Styled(Jumbotron)
+  <StyledArticlesSection>
+    <StyledJumbotron
       key="123"
     >
-      <styled.h3>
+      <StyledHeader>
         123
-      </styled.h3>
+      </StyledHeader>
       <p>
         hola
       </p>
-    </Styled(Jumbotron)>
-  </styled.div>
-  <Component
+    </StyledJumbotron>
+  </StyledArticlesSection>
+  <CounterNews
     total={1}
   />
 </Fragment>

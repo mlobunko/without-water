@@ -71,6 +71,8 @@ export const LogInComponent = ({
   </React.Fragment>
 );
 
+LogInComponent.displayName = 'LogInComponent';
+
 export default LogInComponent;
 
 LogInComponent.propTypes = {

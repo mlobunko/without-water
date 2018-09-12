@@ -17,6 +17,8 @@ export const Button = ({ color, disabled, outline, text, type }) => (
   </StyledButton>
 );
 
+Button.displayName = 'Button';
+
 export default Button;
 
 Button.propTypes = {
